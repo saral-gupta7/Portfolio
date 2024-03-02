@@ -40,7 +40,7 @@ const AboutMe = () => {
         </motion.div>
         <motion.p
           variants={fadeIn("up", "tween", 0.3, 0.75)}
-          className="relative mt-[8px] sm:text-[20px] text-[18px] lg:text-center text-secondary"
+          className="relative mt-[8px] sm:text-[18px] text-[16px] lg:text-center text-secondary"
         >
           <div className="">
             Hey there, I'm{" "}
