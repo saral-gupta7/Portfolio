@@ -40,7 +40,7 @@ const Hero = () => {
             </span> */}
           </motion.h1>
           <motion.p
-            className={`${styles.heroSubText} text-[#8993b1] mt-5 text-center`}
+            className={`${styles.heroSubText} text-[#8993b1] mt-5 sm:text-center`}
             variants={fadeIn("right", "spring", 0.5, 0.75)}
           >
             I am a Web Developer. <br className="sm:block hidden" /> I build
