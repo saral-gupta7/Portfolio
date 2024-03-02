@@ -35,7 +35,7 @@ const AboutMe = () => {
           {/* Profile Image */}
           <img
             src={profile}
-            className="relative xs:w-[14rem] xs:h-[14rem] mb-5 mx-auto rounded-full object-cover border-4  border-gray-800  hover:scale-110 transition-all"
+            className="relative w-[8rem] h-[8rem] sm:w-[14rem] sm:h-[14rem] mb-5 mx-auto rounded-full object-cover border-4  border-gray-800  hover:scale-110 transition-all"
           />
         </motion.div>
         <motion.p
