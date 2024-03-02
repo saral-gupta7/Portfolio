@@ -22,7 +22,7 @@ const Navbar = () => {
           <img
             src={logotr}
             alt="logo"
-            className="sm:w-[9rem] sm:h-[9rem] w-[7rem] h-[7rem] object-contain "
+            className="sm:w-[9rem] sm:h-[9rem] w-[6rem] h-[6rem] object-contain justify-center "
           />
         </Link>
         <ul className="fixed top-[45rem] list-none hidden sm:flex flex-row gap-[7rem] bg-black  rounded-full p-7 shadow-inner shadow-blue-400">
