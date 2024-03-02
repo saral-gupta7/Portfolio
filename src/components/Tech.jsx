@@ -44,9 +44,14 @@ const Tech = () => {
         id="learnings"
         className="sm:p-0 p-4"
       >
-        <motion.div variants={textVariant()}>
+        <motion.div
+          variants={textVariant()}
+          className="sm:text-start text-center"
+        >
           <p className={styles.sectionSubText}>Exploring Tech</p>
-          <h2 className={styles.sectionHeadText}>Technologies I'm Learning</h2>
+          <h2 className={`${styles.sectionHeadText} font-bold`}>
+            Technologies I'm Learning
+          </h2>
         </motion.div>
 
         <motion.p
@@ -62,7 +67,7 @@ const Tech = () => {
           progression in my proficiency.
         </motion.p>
       </motion.div>
-      <div className="mt-20 flex flex-wrap gap-10 sm:justify-start justify-center">
+      <div className="mt-20 flex flex-wrap gap-10 md:justify-start justify-center">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}

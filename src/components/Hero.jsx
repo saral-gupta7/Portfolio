@@ -30,10 +30,8 @@ const Hero = () => {
           whileInView="show"
           viewport={{ once: false, amount: 0.25 }}
         >
-          <motion.h1 variants={textVariant(0.1)}>
-            <span
-              className={`${styles.heroSubHeadText} text-[#ccd6f6] sm:text-center`}
-            >
+          <motion.h1 variants={textVariant(0.1)} className="text-center">
+            <span className={`${styles.heroSubHeadText} text-[#ccd6f6] `}>
               Welcome
             </span>
 
@@ -42,11 +40,11 @@ const Hero = () => {
             </span> */}
           </motion.h1>
           <motion.p
-            className={`${styles.heroSubText} text-[#8993b1] mt-5 sm:text-center`}
+            className={`${styles.heroSubText} text-[#8993b1] mt-5 text-center`}
             variants={fadeIn("right", "spring", 0.5, 0.75)}
           >
-            I am a Web Developer. <br className="sm:block hidden" /> I build
-            Apps for the Future.
+            I am a Web Developer. <br className="sm:block" /> I build Apps for
+            the Future.
           </motion.p>
         </motion.div>
       </div>
