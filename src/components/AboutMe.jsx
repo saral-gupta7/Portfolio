@@ -13,7 +13,7 @@ const AboutMe = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
-      className={`${styles.padding} mx-auto relative z-0`}
+      className={`${styles.padding} w-full mx-auto relative z-0`}
       id="about"
     >
       {/* This is heading motion h1 */}
