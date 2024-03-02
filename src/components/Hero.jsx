@@ -28,10 +28,12 @@ const Hero = () => {
           variants={staggerContainer}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.25 }}
+          viewport={{ once: false, amount: 0.25 }}
         >
           <motion.h1 variants={textVariant(0.1)}>
-            <span className={`${styles.heroSubHeadText} text-[#ccd6f6] `}>
+            <span
+              className={`${styles.heroSubHeadText} text-[#ccd6f6] sm:text-center`}
+            >
               Welcome
             </span>
 

@@ -9,11 +9,11 @@ import { profile } from "../assets";
 const AboutMe = () => {
   return (
     <motion.div
-      variants={staggerContainer}
+      // variants={staggerContainer}
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
-      className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
+      className={`${styles.padding} mx-auto relative z-0`}
       id="about"
     >
       {/* This is heading motion h1 */}
@@ -40,7 +40,7 @@ const AboutMe = () => {
         </motion.div>
         <motion.p
           variants={fadeIn("up", "tween", 0.3, 0.75)}
-          className="relative mt-[8px] sm:text-[26px] text-[20px] lg:text-center text-secondary"
+          className="relative mt-[8px] sm:text-[20px] text-[18px] lg:text-center text-secondary"
         >
           <div className="">
             Hey there, I'm{" "}

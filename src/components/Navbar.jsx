@@ -56,7 +56,7 @@ const Navbar = () => {
           <div
             className={`${
               !toggle ? "hidden" : "flex"
-            } p-8 bg-transparent absolute top-[6.5rem] right-0 mx-0 min-w-[160px] w-full z-10 rounded-[0.5rem] animate-fade-down animate-duration-[600ms]`}
+            } p-8 bg-transparent absolute top-[6.5rem] right-0 mx-0 top-z min-w-[160px] w-full z-10 rounded-[0.5rem] animate-fade-down animate-duration-[600ms]`}
           >
             <ul className=" w-full list-none flex justify-between items-center flex-row ">
               {navLinks.map((link) => (
