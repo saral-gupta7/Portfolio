@@ -35,12 +35,12 @@ const AboutMe = () => {
           {/* Profile Image */}
           <img
             src={profile}
-            className="relative w-[10rem] h-[10rem] sm:w-[14rem] sm:h-[14rem] mb-5 mx-auto rounded-full object-cover border-4  border-gray-800  hover:scale-110 transition-all"
+            className="relative w-[8.5rem] h-[8.5rem] sm:w-[14rem] sm:h-[14rem] mb-5 mx-auto rounded-full object-cover border-4  border-gray-800  hover:scale-110 transition-all"
           />
         </motion.div>
         <motion.p
           variants={fadeIn("up", "tween", 0.3, 0.75)}
-          className="relative mt-[8px] sm:text-[18px] text-[10px] lg:text-center text-secondary"
+          className="relative mt-[8px] sm:text-[18px] text-[13px] lg:text-center text-secondary"
         >
           <div className="">
             Hey there, I'm{" "}
