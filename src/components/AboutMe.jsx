@@ -20,7 +20,7 @@ const AboutMe = () => {
 
       {/* This is the div container of the about me section including photo and text */}
       <div className="relative flex flex-wrap  gap-7 bg-primary  p-[4rem] rounded-2xl w-full mt-10 group">
-        <motion.h1 variants={textVariant()} className="mx-auto">
+        <motion.h1 variants={textVariant()} className="font-bold mx-auto">
           {/* <p className={styles.sectionSubText}></p> */}
           <h2 className={styles.sectionHeadText}>About Me</h2>
         </motion.h1>
