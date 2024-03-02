@@ -42,6 +42,7 @@ const Tech = () => {
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
         id="learnings"
+        className="sm:p-0 p-4"
       >
         <motion.div variants={textVariant()}>
           <p className={styles.sectionSubText}>Exploring Tech</p>
@@ -50,7 +51,7 @@ const Tech = () => {
 
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className="mt -4 text-secondary text-[17px] max-w-3xl leading-[30px] "
+          className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
           As an aspiring web and full-stack developer, I am dedicated to
           mastering cutting-edge technologies such as React.js, Three.js,
@@ -61,7 +62,7 @@ const Tech = () => {
           progression in my proficiency.
         </motion.p>
       </motion.div>
-      <div className="mt-20 flex flex-wrap gap-10 xs:justify-center">
+      <div className="mt-20 flex flex-wrap gap-10 sm:justify-start justify-center">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}

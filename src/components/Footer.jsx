@@ -53,7 +53,7 @@ const Footer = () => {
                 width={40}
                 height={40}
                 alt={item.title}
-                className=" transition-all rounded-full hover:scale-[2.5]"
+                className=" transition-all rounded-full hover:scale-[1.5]"
               />
             </a>
           ))}
