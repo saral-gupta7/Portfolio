@@ -1,4 +1,3 @@
-import React from "react";
 import { styles } from "../styles";
 import { interest } from "../constants";
 import { SectionWrapper } from "../hoc";

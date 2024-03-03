@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { styles } from "../styles";
-import { socials } from "../constants";
+import { socials, navLinks } from "../constants";
 import { logotr, ua } from "../assets";
-import { navLinks } from "../constants";
 
 const Footer = () => {
   const [active, setActive] = useState("");

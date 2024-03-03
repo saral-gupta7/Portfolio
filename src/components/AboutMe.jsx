@@ -1,15 +1,12 @@
-import React from "react";
-import { motion, stagger } from "framer-motion";
+import { motion } from "framer-motion";
 import { styles } from "../styles";
-import { fadeIn, staggerContainer } from "../utils/motion";
-import { textVariant } from "../utils/motion";
+import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
 import { profile } from "../assets";
 
 const AboutMe = () => {
   return (
     <motion.div
-      // variants={staggerContainer}
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
@@ -43,7 +40,7 @@ const AboutMe = () => {
           className="relative mt-[8px] sm:text-[20px] text-[16px] lg:text-center text-secondary"
         >
           <div className="font-grotesk">
-            Hey there, I'm{" "}
+            Hey there, I&apos;m{" "}
             <span className="text-white font-bold">Saral Gupta,</span> a
             first-year student at{" "}
             <span className="text-white font-bold ">IIEST, Shibpur,</span> with
@@ -51,13 +48,13 @@ const AboutMe = () => {
             I thrive on diving into the intricate realms of Data Structures and
             Algorithms, constantly exploring frameworks like React.js and
             Next.js to craft immersive digital experiences. <br />
-            <br /> But my curiosity doesn't stop there. I'm equally fascinated
-            by the boundless possibilities of machine learning and artificial
-            intelligence, always eager to unravel their mysteries and push the
-            boundaries of innovation. <br />
+            <br /> But my curiosity doesn&apos;t stop there. I&apos;m equally
+            fascinated by the boundless possibilities of machine learning and
+            artificial intelligence, always eager to unravel their mysteries and
+            push the boundaries of innovation. <br />
             <br />
             Driven by my relentless passion and an insatiable thirst for
-            knowledge, I'm on a journey to not just keep up with the
+            knowledge, I&apos;m on a journey to not just keep up with the
             ever-evolving tech landscape but to carve my own path towards
             success. Join me as I embark on this exhilarating adventure of
             learning, growth, and discovery.
