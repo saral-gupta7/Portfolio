@@ -2,28 +2,37 @@ import React from "react";
 import { styles } from "../styles";
 import { interest } from "../constants";
 import { SectionWrapper } from "../hoc";
+import { motion } from "framer-motion";
+import { fadeIn, textVariant } from "../utils/motion";
 
 const Interest = () => {
   return (
-    <div
+    <motion.div
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.25 }}
       className={`${styles.padding} flex flex-wrap sm:justify-start justify-center`}
       id="interest"
     >
       <div className="max-w-[50rem] flex-col items-center sm:text-start text-center mb-20">
-        <h2 className={`${styles.sectionHeadText} mb-4`}>
+        <motion.h2
+          className={`${styles.sectionHeadText} mb-4`}
+          variants={textVariant()}
+        >
           Other Tech Stacks I'm interested In
-        </h2>
+        </motion.h2>
         <ul>
-          {interest.map((item) => (
-            <li
+          {interest.map((item, index) => (
+            <motion.li
               key={item.name}
               className={`text-[#dfd9ff] font-grotesk text-[20px]`}
+              variants={fadeIn("right", "spring", `${0.5 * index}`, 0.75)}
             >
               <div className="flex items-center">
                 <img src={item.icon} alt={item.name} width={30} height={30} />
                 <h6 className="ml-4 p-5">{item.name}</h6>
               </div>
-            </li>
+            </motion.li>
           ))}
         </ul>
       </div>
@@ -35,7 +44,7 @@ const Interest = () => {
         </div>
         <ul>{}</ul>
       </div> */}
-    </div>
+    </motion.div>
   );
 };
 
