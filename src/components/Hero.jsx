@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section className="relative w-full h-screen mx-auto">
       <div
-        className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start justify-center gap-5`}
+        className={`${styles.paddingX} absolute inset-0 sm:top-[110px] top-[90px] max-w-7xl mx-auto flex flex-row items-start justify-center gap-5`}
       >
         {/* The Main text */}
 
@@ -19,7 +19,7 @@ const Hero = () => {
           viewport={{ once: false, amount: 0.25 }}
         >
           <motion.h1 variants={textVariant(1)} className="text-center">
-            <span className={`${styles.heroSubHeadText} text-[#ccd6f6] `}>
+            <span className={`${styles.heroSubHeadText} text-[#ccd6f6]`}>
               Welcome
             </span>
           </motion.h1>
