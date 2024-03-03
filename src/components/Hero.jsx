@@ -18,14 +18,14 @@ const Hero = () => {
           whileInView="show"
           viewport={{ once: false, amount: 0.25 }}
         >
-          <motion.h1 variants={textVariant(0.1)} className="text-center">
+          <motion.h1 variants={textVariant(1)} className="text-center">
             <span className={`${styles.heroSubHeadText} text-[#ccd6f6] `}>
               Welcome
             </span>
           </motion.h1>
           <motion.p
             className={`${styles.heroSubText} text-[#8993b1] mt-5 text-center`}
-            variants={fadeIn("right", "spring", 0.5, 0.75)}
+            variants={fadeIn("right", "spring", 1.5, 0.75)}
           >
             I am a Web Developer. <br className="sm:block" /> I build Apps for
             the Future.
