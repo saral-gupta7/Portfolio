@@ -65,7 +65,7 @@ const socials = [
   {
     name: "Instagram",
     icon: instagram,
-    url: "https://www.instagram.com/srl.gpt7/",
+    url: "https://www.instagram.com/",
   },
 ];
 
