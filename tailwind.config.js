@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+import { fontFamily } from "tailwindcss/defaultTheme";
+import plugin from "tailwindcss/plugin";
+
 module.exports = {
   content: ["./src/**/*.{js,jsx}"],
   mode: "jit",
@@ -17,6 +20,9 @@ module.exports = {
         play: ["Play", "sans-serif"],
         bebas: ["Bebas Neue", "sans-serif"],
         roboto: ["Roboto", "sans-serif"],
+        sans: ["var(--font-sora)", ...fontFamily.sans],
+        code: "var(--font-code)",
+        grotesk: "var(--font-grotesk)",
       },
       boxShadow: {
         card: "0px 35px 120px -15px #211e35",

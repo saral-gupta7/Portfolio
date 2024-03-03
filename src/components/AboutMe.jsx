@@ -40,11 +40,11 @@ const AboutMe = () => {
         </motion.div>
         <motion.p
           variants={fadeIn("up", "tween", 0.3, 0.75)}
-          className="relative mt-[8px] sm:text-[20px] text-[14px] lg:text-center text-secondary"
+          className="relative mt-[8px] sm:text-[20px] text-[16px] lg:text-center text-secondary"
         >
-          <div className="">
+          <div className="font-grotesk">
             Hey there, I'm{" "}
-            <span className="text-white font-bold ">Saral Gupta,</span> a
+            <span className="text-white font-bold">Saral Gupta,</span> a
             first-year student at{" "}
             <span className="text-white font-bold ">IIEST, Shibpur,</span> with
             a burning passion for all things tech. As an aspiring web developer,

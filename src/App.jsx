@@ -9,6 +9,7 @@ import {
   AboutMe,
   Works,
   StarsCanvas,
+  Interest,
   Footer,
 } from "./components";
 
@@ -26,6 +27,7 @@ const App = () => {
         </div>
         <AboutMe />
         <Tech />
+        <Interest />
         {/* <Experience /> */}
 
         {/* <Works /> */}

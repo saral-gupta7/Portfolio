@@ -34,8 +34,9 @@ import linkedin from "./linkedin.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
-
+import next from "./next.png";
 export {
+  next,
   linkedin,
   instagram,
   git,

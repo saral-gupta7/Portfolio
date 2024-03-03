@@ -8,7 +8,8 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-5 relative top-0 z-20 bg-transparent`}
+      className={`${styles.paddingX} w-full flex relative items-center py-5  top-0 z-20 bg-transparent font-grotesk`}
+      id="home"
     >
       <div className="w-full flex justify-center items-center max-7x1 mx-auto">
         <Link
@@ -25,7 +26,7 @@ const Navbar = () => {
             className="sm:w-[9rem] sm:h-[9rem] w-[6rem] h-[6rem] object-contain justify-center "
           />
         </Link>
-        <ul className="fixed top-[45rem] list-none hidden sm:flex flex-row gap-[5rem] bg-black  rounded-full p-8 shadow-inner shadow-blue-400">
+        <ul className="fixed top-[47em] list-none hidden sm:flex flex-row gap-[4rem] bg-black md:-skew-x-[3deg]  md:rounded-sm rounded-full p-[1.75rem] shadow-inner shadow-blue-400">
           {navLinks.map((link) => (
             <li
               key={link.id}
@@ -33,7 +34,7 @@ const Navbar = () => {
                 active === link.title
                   ? "text-white border-b-2"
                   : "text-secondary"
-              } hover:text-[#FEE715] transition-all text-[19px] font-medium cursor-pointer`}
+              } hover:text-[#FEE715] transition-all md:text-[20px] font-[16px]  cursor-pointer md:skew-x-[3deg]`}
               onClick={() => {
                 setActive(link.title);
               }}

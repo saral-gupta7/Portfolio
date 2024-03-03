@@ -25,9 +25,14 @@ import {
   threejs,
   instagram,
   linkedin,
+  next,
 } from "../assets";
 
 export const navLinks = [
+  {
+    id: "home",
+    title: "Home",
+  },
   {
     id: "about",
     title: "About",
@@ -37,8 +42,12 @@ export const navLinks = [
     title: "Learnings",
   },
   {
+    id: "interest",
+    title: "Interests",
+  },
+  {
     id: "socials",
-    title: "Socials",
+    title: "Connect",
   },
 ];
 
@@ -281,4 +290,28 @@ const socials = [
     url: "https://www.instagram.com/srl.gpt7/",
   },
 ];
-export { services, technologies, experiences, testimonials, projects, socials };
+
+const interest = [
+  {
+    name: "Web Development",
+    icon: next,
+  },
+  {
+    name: "Machine Learning And AI",
+    icon: next,
+  },
+  {
+    name: "Web3 and Blockchain",
+    icon: next,
+  },
+];
+
+export {
+  services,
+  technologies,
+  experiences,
+  testimonials,
+  projects,
+  socials,
+  interest,
+};
