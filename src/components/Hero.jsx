@@ -30,7 +30,6 @@ const Hero = () => {
             I am a Web Developer. <br className="sm:block" /> I build Apps for
             the Future.
           </motion.p>
-          <button className="text-[24px] mt-20">Saral</button>
         </motion.div>
       </div>
       {/*    */}

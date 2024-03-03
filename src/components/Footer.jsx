@@ -1,17 +1,14 @@
-import React from "react";
 import { useState } from "react";
 import { styles } from "../styles";
 import { socials } from "../constants";
-import { logotr } from "../assets";
-import { motion } from "framer-motion";
-import { textVariant } from "../utils/motion";
+import { logotr, ua } from "../assets";
 import { navLinks } from "../constants";
 
 const Footer = () => {
   const [active, setActive] = useState("");
   return (
     <div
-      className={`${styles.padding} p-[20px] bg-gradient-to-r from-[#000000] to-[#000026] w-full sm:h-[40rem] h-20rem flex justify-between lg:items-start items-center gap-10  `}
+      className={`${styles.padding} p-[20px] bg-gradient-to-r from-[#000000] to-[#000026] w-full sm:h-[40rem] h-30rem flex justify-between lg:items-start items-center gap-10  `}
       id="socials"
     >
       <div className="lg:flex hidden flex-col space-y-9">
@@ -59,6 +56,13 @@ const Footer = () => {
         <p className="text-secondary ">
           Copyright &copy; {new Date().getFullYear()}. All Rights Reserved.
         </p>
+        <a href="#home">
+          <img
+            src={ua}
+            alt="top"
+            className="w-[3.5rem] h-[3.5rem] mt-20 duration-1000 animate-bounce"
+          />
+        </a>
       </div>
     </div>
   );
