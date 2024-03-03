@@ -26,7 +26,7 @@ const Navbar = () => {
             className="sm:w-[9rem] sm:h-[9rem] w-[6rem] h-[6rem] object-contain justify-center "
           />
         </Link>
-        <ul className="fixed top-[47em] list-none hidden sm:flex flex-row gap-[4rem] bg-black md:-skew-x-[3deg]  md:rounded-sm rounded-full p-[1.75rem] shadow-inner shadow-blue-400">
+        <ul className="fixed top-[46rem] list-none hidden sm:flex flex-row gap-[4rem] bg-black rounded-full p-[1.75rem] shadow-inner shadow-blue-400">
           {navLinks.map((link) => (
             <li
               key={link.id}
@@ -34,7 +34,7 @@ const Navbar = () => {
                 active === link.title
                   ? "text-white border-b-2"
                   : "text-secondary"
-              } hover:text-[#FEE715] transition-all md:text-[20px] font-[16px]  cursor-pointer md:skew-x-[3deg]`}
+              } hover:text-[#FEE715] transition-all md:text-[20px] font-[16px]  cursor-pointer `}
               onClick={() => {
                 setActive(link.title);
               }}

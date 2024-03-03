@@ -6,7 +6,7 @@ import { SectionWrapper } from "../hoc";
 const Interest = () => {
   return (
     <div
-      className={`${styles.padding} flex flex-wrap justify-center `}
+      className={`${styles.padding} flex flex-wrap sm:justify-start justify-center`}
       id="interest"
     >
       <div className="max-w-[25rem] flex-col items-center text-center mb-20">
@@ -27,14 +27,14 @@ const Interest = () => {
           ))}
         </ul>
       </div>
-      <div className="lg:ml-auto xl:w-[38]">
+      {/* <div className="lg:ml-auto xl:w-[38]">
         <div className="relative  left-1/2 flex w-[22rem] aspect-square border border-secondary rounded-full -translate-x-1/2 scale:75 md: scale:100">
           <div className="flex w-[15rem] aspect-square m-auto border border-slate-400 rounded-full">
             <div className="w-[6rem] aspect-square"></div>
           </div>
         </div>
         <ul>{}</ul>
-      </div>
+      </div> */}
     </div>
   );
 };
