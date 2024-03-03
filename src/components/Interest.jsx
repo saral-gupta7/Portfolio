@@ -9,15 +9,15 @@ const Interest = () => {
       className={`${styles.padding} flex flex-wrap sm:justify-start justify-center`}
       id="interest"
     >
-      <div className="max-w-[25rem] flex-col items-center text-center mb-20">
-        <h2 className={`${styles.heroSubText}text-white font-grotesk mb-4`}>
+      <div className="max-w-[50rem] flex-col items-center sm:text-start text-center mb-20">
+        <h2 className={`${styles.sectionHeadText} mb-4`}>
           Other Tech Stacks I'm interested In
         </h2>
         <ul>
           {interest.map((item) => (
             <li
               key={item.name}
-              className={`text-white font-grotesk text-[20px]`}
+              className={`text-[#dfd9ff] font-grotesk text-[20px]`}
             >
               <div className="flex items-center">
                 <img src={item.icon} alt={item.name} width={30} height={30} />
