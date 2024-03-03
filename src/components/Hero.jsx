@@ -30,6 +30,16 @@ const Hero = () => {
             I am a Web Developer. <br className="sm:block" /> I build Apps for
             the Future.
           </motion.p>
+          <motion.div
+            variants={textVariant(2)}
+            className="relative w-full flex justify-center items-center mt-20"
+          >
+            <a href="#about">
+              <button className="relative sm:hidden flex justify-center sm:w-[12rem] w-[10rem] text-white font-grotesk uppercase font-bold sm:text-[24px] text-[20px] bg-black p-4 rounded-full shadow-[#afe0f6] shadow-md animate-bounce">
+                Explore
+              </button>
+            </a>
+          </motion.div>
         </motion.div>
       </div>
       {/*    */}
