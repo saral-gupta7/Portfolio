@@ -8,10 +8,10 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   return (
     <nav
-      className={`${styles.paddingX} w-full flex relative items-center py-5  top-0 z-20 bg-transparent font-grotesk`}
+      className={`${styles.paddingX} w-full flex fixed py-1  top-0 z-20 bg-[#000] opacity-95 font-grotesk`}
       id="home"
     >
-      <div className="w-full flex justify-center items-center max-7x1 mx-auto">
+      <div className="w-full flex justify-between">
         <Link
           to="/"
           className="flex items-center"
@@ -23,18 +23,18 @@ const Navbar = () => {
           <img
             src={logotr}
             alt="logo"
-            className="sm:w-[9rem] sm:h-[9rem] w-[6rem] h-[6rem] object-contain justify-center "
+            className="sm:w-[9rem] sm:h-[6rem] w-[5rem] h-[5rem] object-contain"
           />
         </Link>
-        <ul className="fixed top-[46rem] list-none hidden sm:flex flex-row gap-[4rem] bg-black rounded-full p-[1.75rem] shadow-inner shadow-blue-400">
+        <ul className="list-none hidden lg:flex gap-[3rem] items-center justify-center p-[1rem]">
           {navLinks.map((link) => (
             <li
               key={link.id}
               className={`${
                 active === link.title
-                  ? "text-white border-b-2"
+                  ? "text-white border-[#4d4dff] border-b-2"
                   : "text-secondary"
-              } hover:text-[#FEE715] transition-all md:text-[20px] font-[16px]  cursor-pointer `}
+              } hover:text-[#fff]  transition-all md:text-[16px] font-[16px]  cursor-pointer uppercase last:border-[2px] last:border-[#4d4dff] last:p-3 last:text-[14px] last:text-white last:rounded-sm last:hover:bg-[#4d4dff] last:font-bold`}
               onClick={() => {
                 setActive(link.title);
               }}
@@ -44,7 +44,7 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <div className="sm:hidden flex flex-1 justify-end items-center">
+        <div className="lg:hidden flex flex-1 justify-end items-center">
           <img
             src={toggle ? close : menu}
             alt="menu"
@@ -56,16 +56,18 @@ const Navbar = () => {
 
           <div
             className={`${
-              !toggle ? "hidden" : "flex"
-            } p-8 flex bg-transparent absolute top-[6.5rem] right-0 mx-0 top-z min-w-[160px] w-full z-10 rounded-[0.5rem] animate-fade-down animate-duration-[600ms]`}
+              !toggle
+                ? "hidden"
+                : "flex animate-flip-down animate-duration-[400ms]"
+            } p-8 flex bg-[#000] absolute top-[5.5rem] right-0 mx-0 top-z min-w-[160px] h-screen w-full z-10 rounded-[0.5rem] `}
           >
-            <ul className=" w-full list-none flex justify-evenly items-center flex-wrap ">
+            <ul className=" w-full list-none flex flex-col gap-[6rem] items-center flex-wrap">
               {navLinks.map((link) => (
                 <li
                   key={link.id}
                   className={`${
                     active === link.title ? "text-white" : "text-secondary"
-                  } font-poppins font-medium cursor-pointer text-[16px]`}
+                  } font-grotesk font-medium cursor-pointer text-[20px] hover:text-white  transition-all uppercase`}
                   onClick={() => {
                     setToggle(!toggle);
                     setActive(link.title);

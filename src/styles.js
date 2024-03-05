@@ -17,6 +17,7 @@ const styles = {
     "text-white font-grotesk md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]",
   sectionSubText:
     "sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider",
+  borderGradient: "bg-gradient-to-r from-[#0575E6] to-[#65C7F7]",
 };
 
 export { styles };

@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section className="relative w-full h-screen mx-auto">
       <div
-        className={`${styles.paddingX} absolute inset-0 sm:top-[110px] top-[90px] max-w-7xl mx-auto flex flex-row items-start justify-center gap-5`}
+        className={`${styles.paddingX} absolute inset-0 max-w-7xl mx-auto flex items-center justify-center gap-5`}
       >
         {/* The Main text */}
 

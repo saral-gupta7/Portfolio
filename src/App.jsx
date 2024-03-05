@@ -9,7 +9,7 @@ const App = () => {
         {/* prev bg-hero-pattern */}
         {/* some good darks: #1a1a1d 
         #101532*/}
-        <div className="relative bg-hero-pattern bg-cover bg-no-repeat bg-center opacity-100 shadow-lg shadow-slate-700">
+        <div className="relative bg-hero-pattern bg-cover bg-no-repeat bg-center">
           <Navbar />
           <Hero />
         </div>

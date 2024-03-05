@@ -43,6 +43,6 @@ To run this project locally, follow these steps:
 After installing dependencies, you can start the development server:
 `npm run dev`
 
-# Deployment
+## Deployment
 
 This website is deployed on Vercel. You can access it here.
