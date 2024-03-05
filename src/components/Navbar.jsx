@@ -4,12 +4,34 @@ import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { menu, close, logox, logotr } from "../assets";
 const Navbar = () => {
+  const [showBackground, setshowBackground] = useState(false);
+  const TOP_OFFSET = 50;
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= TOP_OFFSET) {
+        setshowBackground(true);
+      } else {
+        setshowBackground(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   return (
     <nav
-      className={`${styles.paddingX} w-full flex fixed py-1  top-0 z-20 bg-[#000] opacity-95 font-grotesk`}
-      id="home"
+      className={`${styles.paddingX} ${
+        showBackground
+          ? "bg-[#000710] backdrop-blur-sm opacity-90 ease-in-out transition-all duration-[700ms]"
+          : "bg-none ease-in-out transition-all duration-[400ms]"
+      } w-full flex fixed py-1 top-0 z-20 font-grotesk`}
     >
       <div className="w-full flex justify-between">
         <Link
@@ -59,7 +81,9 @@ const Navbar = () => {
               !toggle
                 ? "hidden"
                 : "flex animate-flip-down animate-duration-[400ms]"
-            } p-8 flex bg-[#000] absolute top-[5.5rem] right-0 mx-0 top-z min-w-[160px] h-screen w-full z-10 rounded-[0.5rem] `}
+            } p-8 flex ${
+              showBackground ? "bg-[#000710]" : ""
+            } absolute top-[5.5rem] right-0 mx-0 top-z min-w-[160px] h-screen items-center w-full z-10 rounded-[0.5rem] `}
           >
             <ul className=" w-full list-none flex flex-col gap-[6rem] items-center flex-wrap">
               {navLinks.map((link) => (

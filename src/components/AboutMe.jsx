@@ -1,53 +1,98 @@
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
 import { profile } from "../assets";
+import { about } from "../constants";
 
 const AboutMe = () => {
+  const [show, setshow] = useState(true);
   return (
-    <motion.div
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: false, amount: 0.25 }}
-      className={`${styles.padding} w-full mx-auto relative z-0`}
-      id="about"
-    >
-      {/* This is heading motion h1 */}
-
-      {/* This is the div container of the about me section including photo and text */}
-      <div className="relative flex flex-wrap  gap-7 bg-primary  p-[4rem] rounded-2xl w-full group border-4 border-orange-400">
-        <motion.h1 variants={textVariant()} className="font-bold mx-auto">
-          {/* <p className={styles.sectionSubText}></p> */}
-          <h2 className={styles.sectionHeadText}>About Me</h2>
-        </motion.h1>
-        {/* This the bg for the blur effect */}
-
-        <div className="absolute -inset-0.5 bg-gradient-to-r from-[#0575E6] to-[#65C7F7] rounded-2xl blur z-[-3] opacity-75 group-hover:opacity-100 transition duration-300 "></div>
-
-        <motion.div
-          variants={fadeIn("up", "tween", 0.2, 0.75)}
-          className="w-full relative mt-8"
+    // main container
+    <>
+      <motion.div id="about">
+        <motion.h2
+          variants={textVariant()}
+          className={`${styles.sectionHeadText} ${
+            show ? "flex justify-center" : "justify-start"
+          } font-bold mb-10`}
         >
-          {/* Profile Image */}
+          Get To Know Me
+        </motion.h2>
+      </motion.div>
+      {/* <div className="max-w-[80rem] flex justify-center items-center mx-auto"> */}
+      <div
+        className={` relative px-16 py-16 ${
+          show ? "max-w-[40rem]" : "max-w-[80rem]"
+        } mx-auto flex flex-row items-center justify-between bg-primary group rounded-2xl font-grotesk `}
+      >
+        <div className="absolute -inset-0.5 bg-gradient-to-r from-[#0575E6] to-[#4d4dff] rounded-2xl blur z-[-3] opacity-75 group-hover:opacity-100 transition duration-300 "></div>
+        <div className="w-[40rem] flex flex-col items-center p-6">
           <img
             src={profile}
-            className="relative w-[8.5rem] h-[8.5rem] sm:w-[14rem] sm:h-[14rem] mb-5 mx-auto rounded-full object-cover border-4  border-gray-800  hover:scale-110 transition-all"
+            className="relative w-[10.5rem] h-[14.5rem] sm:w-[15rem] sm:h-[21rem] mb-20 rounded-t-[8rem] object-fill border-4  border-gray-800  hover:scale-110 transition-all"
           />
-        </motion.div>
-        <motion.p
-          variants={fadeIn("up", "tween", 0.3, 0.75)}
-          className="relative mt-[8px] sm:text-[20px] text-[16px] lg:text-center text-secondary"
-        >
-          <div className="font-grotesk">
-            Hey there, I&apos;m{" "}
-            <span className="text-white font-bold">Saral Gupta,</span> a
-            first-year student at{" "}
-            <span className="text-white font-bold ">IIEST, Shibpur,</span> with
-            a burning passion for all things tech. As an aspiring web developer,
-            I thrive on diving into the intricate realms of Data Structures and
-            Algorithms, constantly exploring frameworks like React.js and
-            Next.js to craft immersive digital experiences. <br />
+
+          <p>
+            {about.map((item) => (
+              <ul
+                key={item.name}
+                className="flex flex-col items-start gap-10 list-none p-15 text-[24px] mb-10 font-grotesk "
+              >
+                <li className="mx-auto text-[24px] uppercase">
+                  <span className="">Hi, I'm </span>
+                  <span className="">{item.name}</span>
+                </li>
+                <li>
+                  Designation:{" "}
+                  <span className="text-[#ccd6f6] font-grotesk">
+                    {" "}
+                    {item.designation}
+                  </span>
+                </li>
+                <li>
+                  Qualification:{" "}
+                  <span className="text-[#ccd6f6] font-grotesk">
+                    {" "}
+                    {item.qualification}
+                  </span>
+                </li>
+                <li>
+                  Skillset:{" "}
+                  <span className="text-[#ccd6f6] font-grotesk">
+                    {" "}
+                    {item.Skillset}
+                  </span>
+                </li>
+              </ul>
+            ))}
+          </p>
+
+          <button
+            className="sm:flex hidden p-4 border-2 border-[#4d4dff] rounded-sm hover:bg-[#4d4dff]"
+            onClick={() => {
+              setshow(!show);
+            }}
+          >
+            {show ? "Read More" : "Read Less"}
+          </button>
+        </div>
+
+        <div className={`${show ? "hidden" : "w-[40rem]"}`}>
+          <p className="font-grotesk p-10 text-[19px]">
+            <span className="text-white text-[64px] font-poppins block">
+              {" "}
+              I&apos;m Saral.
+            </span>{" "}
+            <span className="text-white font-bold ">
+              I&apos;m a freshman at IIEST, Shibpur bacheloring in Electrical
+              Engineering.
+            </span>{" "}
+            As an aspiring web developer, I thrive on diving into the intricate
+            realms of Data Structures and Algorithms, constantly exploring
+            frameworks like React.js and Next.js to craft immersive digital
+            experiences. <br />
             <br /> But my curiosity doesn&apos;t stop there. I&apos;m equally
             fascinated by the boundless possibilities of machine learning and
             artificial intelligence, always eager to unravel their mysteries and
@@ -58,12 +103,15 @@ const AboutMe = () => {
             ever-evolving tech landscape but to carve my own path towards
             success. Join me as I embark on this exhilarating adventure of
             learning, growth, and discovery.
-          </div>
-        </motion.p>
+          </p>
+        </div>
       </div>
-    </motion.div>
+      {/* </div> */}
+    </>
   );
 };
 
-const TechSection = SectionWrapper(AboutMe, "");
-export default TechSection;
+// const TechSection = SectionWrapper(AboutMe, "");
+// export default TechSection;
+const AboutMeSection = SectionWrapper(AboutMe, "about");
+export default AboutMeSection;

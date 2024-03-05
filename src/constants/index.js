@@ -28,6 +28,15 @@ export const navLinks = [
   },
 ];
 
+const about = [
+  {
+    name: "Saral",
+    designation: "Student",
+    qualification: "Sophomore",
+    Skillset: "Javascript, ReactJS, NodeJS",
+  },
+];
+
 const services = [
   {
     title: "Web Development",
@@ -80,4 +89,4 @@ const interest = [
   },
 ];
 
-export { services, socials, interest };
+export { services, socials, interest, about };

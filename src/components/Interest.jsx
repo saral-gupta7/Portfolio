@@ -10,10 +10,10 @@ const Interest = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
-      className={`${styles.padding} flex flex-wrap sm:justify-start justify-center`}
+      className={`${styles.padding} flex flex-wrap sm:justify-between justify-center`}
       id="interest"
     >
-      <div className="max-w-[50rem] flex-col items-center sm:text-start text-center mb-20">
+      <div className="max-w-[50rem] flex-col items-center sm:text-start text-center mb-20 p-2">
         <motion.h2
           className={`${styles.sectionHeadText} mb-4`}
           variants={textVariant()}
