@@ -31,7 +31,7 @@ const AboutMe = () => {
         <div className="w-[40rem] flex flex-col items-center p-6">
           <img
             src={profile}
-            className="relative w-[10.5rem] h-[14.5rem] sm:w-[15rem] sm:h-[21rem] mb-20 rounded-t-[8rem] object-fill border-4  border-gray-800  hover:scale-110 transition-all"
+            className="relative w-[11.5rem] h-[16.1rem] sm:w-[15rem] sm:h-[21rem] mb-20 rounded-t-[8rem] object-fill border-4  border-gray-800  hover:scale-110 transition-all"
           />
 
           <p>
