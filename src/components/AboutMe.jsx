@@ -23,14 +23,14 @@ const AboutMe = () => {
       </motion.div>
       {/* <div className="max-w-[80rem] flex justify-center items-center mx-auto"> */}
       <div
-        className={` relative sm:px-16 sm:py-16 px-3 w-full
+        className={`relative sm:px-16 sm:py-16 px-3 py-10 w-full
         mx-auto flex md:flex-col flex-wrap items-center justify-between bg-primary group rounded-2xl font-grotesk `}
       >
         <div className="absolute -inset-0.5 bg-gradient-to-r from-[#0575E6] to-[#4d4dff] rounded-2xl blur z-[-3] opacity-75 group-hover:opacity-100 transition duration-300 "></div>
-        <div className="w-[20rem] flex flex-col items-start p-6">
+        <div className="w-full flex flex-row justify-center p-6">
           <img
             src={profile}
-            className="relative w-[11.5rem] h-[16.1rem] sm:w-[15rem] sm:h-[15rem]  rounded-full  object-cover hover:scale-105 transition-all"
+            className="relative w-[12rem] h-[12rem] sm:w-[15rem] sm:h-[15rem] rounded-full object-cover hover:scale-105 transition-all"
           />
 
           {/* <p>
@@ -78,8 +78,8 @@ const AboutMe = () => {
           </button> */}
         </div>
         <div className={` w-[60rem]`}>
-          <p className="font-grotesk p-10 text-[14px]">
-            <span className="text-white sm:text-[70px] text-[40px] font-poppins flex justify-center mb-4">
+          <p className="font-grotesk p-10 text-[18px]">
+            <span className="text-white sm:text-[70px] text-[45px] font-poppins flex justify-start sm:justify-center mb-4">
               {" "}
               I&apos;m Saral.
             </span>{" "}
@@ -105,7 +105,7 @@ const AboutMe = () => {
               : ``}
             <br />
             <button
-              className="sm:mt-3 mt-10 sm:flex sm:justify-center justify-start p-4 border-2 border-[#4d4dff] rounded-sm hover:bg-[#4d4dff]"
+              className="sm:mt-3 mt-12 sm:flex sm:justify-center justify-start p-4 border-2 border-[#4d4dff] rounded-sm hover:bg-[#4d4dff]"
               onClick={() => {
                 setshow(!show);
               }}
