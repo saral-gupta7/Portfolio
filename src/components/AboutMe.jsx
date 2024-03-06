@@ -79,7 +79,7 @@ const AboutMe = () => {
         </div>
         <div className={` w-[60rem]`}>
           <p className="font-grotesk p-10 text-[14px]">
-            <span className="text-white text-[70px] font-poppins flex justify-center mb-4">
+            <span className="text-white sm:text-[70px] text-[40px] font-poppins flex justify-center mb-4">
               {" "}
               I&apos;m Saral.
             </span>{" "}
