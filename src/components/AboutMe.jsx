@@ -23,13 +23,14 @@ const AboutMe = () => {
       </motion.div>
       {/* <div className="max-w-[80rem] flex justify-center items-center mx-auto"> */}
       <div
-        className={` relative px-16 py-16 w-full mx-auto flex md:flex-row flex-wrap items-center justify-between bg-primary group rounded-2xl font-grotesk `}
+        className={` relative sm:px-16 sm:py-16 px-5 w-full
+        } mx-auto flex md:flex-col flex-wrap items-center justify-between bg-primary group rounded-2xl font-grotesk `}
       >
         <div className="absolute -inset-0.5 bg-gradient-to-r from-[#0575E6] to-[#4d4dff] rounded-2xl blur z-[-3] opacity-75 group-hover:opacity-100 transition duration-300 "></div>
-        <div className="w-[30rem] flex flex-col items-start p-6">
+        <div className="w-[20rem] flex flex-col items-start p-6">
           <img
             src={profile}
-            className="relative w-[11.5rem] h-[16.1rem] sm:w-[19rem] sm:h-[27rem] mb-20 rounded-t-[8rem] shadow-card object-cover hover:scale-105 transition-all"
+            className="relative w-[11.5rem] h-[16.1rem] sm:w-[15rem] sm:h-[15rem]  rounded-full  object-cover hover:scale-105 transition-all"
           />
 
           {/* <p>
@@ -76,14 +77,13 @@ const AboutMe = () => {
             {show ? "Read More" : "Read Less"}
           </button> */}
         </div>
-
-        <div className={`${show ? "hidden" : "w-[50rem]"}`}>
+        <div className={` w-[60rem]`}>
           <p className="font-grotesk p-10 text-[18px]">
-            <span className="text-white text-[70px] font-poppins block">
+            <span className="text-white text-[70px] font-poppins flex justify-center mb-4">
               {" "}
               I&apos;m Saral.
             </span>{" "}
-            <span className="text-white font-bold ">
+            <span className=" text-white font-bold  ">
               I&apos;m a freshman at IIEST, Shibpur bacheloring in Electrical
               Engineering.
             </span>{" "}
@@ -96,13 +96,24 @@ const AboutMe = () => {
             artificial intelligence, always eager to unravel their mysteries and
             push the boundaries of innovation. <br />
             <br />
-            Driven by my relentless passion and an insatiable thirst for
-            knowledge, I&apos;m on a journey to not just keep up with the
-            ever-evolving tech landscape but to carve my own path towards
-            success. Join me as I embark on this exhilarating adventure of
-            learning, growth, and discovery.
+            {show
+              ? "Driven by my relentless passion and an insatiable thirst for \
+            knowledge, I'm on a journey to not just keep up with the \
+            ever-evolving tech landscape but to carve my own path towards \
+            success. Join me as I embark on this exhilarating adventure of \
+            learning, growth, and discovery."
+              : ``}
+            <br />
+            <button
+              className="sm:mt-3 mt-10 sm:flex sm:justify-center justify-start p-4 border-2 border-[#4d4dff] rounded-sm hover:bg-[#4d4dff]"
+              onClick={() => {
+                setshow(!show);
+              }}
+            >
+              {show ? "Read Less" : "Read More"}
+            </button>
           </p>
-        </div>
+        </div>{" "}
       </div>
       {/* </div> */}
     </>
