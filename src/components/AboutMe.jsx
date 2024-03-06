@@ -23,7 +23,7 @@ const AboutMe = () => {
       </motion.div>
       {/* <div className="max-w-[80rem] flex justify-center items-center mx-auto"> */}
       <div
-        className={` relative px-16 py-16 w-full mx-auto flex md:flex-row  items-center justify-between bg-primary group rounded-2xl font-grotesk `}
+        className={` relative px-16 py-16 w-full mx-auto flex md:flex-row flex-wrap items-center justify-between bg-primary group rounded-2xl font-grotesk `}
       >
         <div className="absolute -inset-0.5 bg-gradient-to-r from-[#0575E6] to-[#4d4dff] rounded-2xl blur z-[-3] opacity-75 group-hover:opacity-100 transition duration-300 "></div>
         <div className="w-[30rem] flex flex-col items-start p-6">
