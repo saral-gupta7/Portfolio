@@ -26,7 +26,9 @@ import linkedin from "./linkedin.png";
 import carrent from "./carrent.png";
 import next from "./next.png";
 import ua from "./ua.png";
+import ar from "./ar.png";
 export {
+  ar,
   ua,
   next,
   linkedin,

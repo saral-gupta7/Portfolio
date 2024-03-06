@@ -29,7 +29,7 @@ const Navbar = () => {
     <nav
       className={`${styles.paddingX} ${
         showBackground
-          ? "bg-[#000710] backdrop-blur-sm opacity-90 ease-in-out transition-all duration-[700ms]"
+          ? "bg-[#000710] backdrop-blur-sm opacity-90 ease-in-out transition-all duration-[700ms] shadow-card"
           : "bg-none ease-in-out transition-all duration-[400ms]"
       } w-full flex fixed py-1 top-0 z-20 font-grotesk`}
     >
