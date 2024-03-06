@@ -23,8 +23,8 @@ const AboutMe = () => {
       </motion.div>
       {/* <div className="max-w-[80rem] flex justify-center items-center mx-auto"> */}
       <div
-        className={` relative sm:px-16 sm:py-16 px-5 w-full
-        } mx-auto flex md:flex-col flex-wrap items-center justify-between bg-primary group rounded-2xl font-grotesk `}
+        className={` relative sm:px-16 sm:py-16 px-3 w-full
+        mx-auto flex md:flex-col flex-wrap items-center justify-between bg-primary group rounded-2xl font-grotesk `}
       >
         <div className="absolute -inset-0.5 bg-gradient-to-r from-[#0575E6] to-[#4d4dff] rounded-2xl blur z-[-3] opacity-75 group-hover:opacity-100 transition duration-300 "></div>
         <div className="w-[20rem] flex flex-col items-start p-6">
@@ -78,7 +78,7 @@ const AboutMe = () => {
           </button> */}
         </div>
         <div className={` w-[60rem]`}>
-          <p className="font-grotesk p-10 text-[18px]">
+          <p className="font-grotesk p-10 text-[14px]">
             <span className="text-white text-[70px] font-poppins flex justify-center mb-4">
               {" "}
               I&apos;m Saral.
