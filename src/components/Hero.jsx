@@ -45,7 +45,7 @@ const Hero = () => {
           </motion.p>
           <motion.div
             variants={textVariant(1)}
-            className="relative w-full flex sm:flex-row sm:justify-center items-center flex-col gap-4 mt-20 "
+            className="relative w-full flex sm:flex-row sm:justify-center justify-center  gap-4 mt-20 "
           >
             <a href="#about">
               <button className="flex justify-evenly items-center sm:w-[12rem] w-[9rem] shadow-card hover:bg-white hover:text-black  hover:border-[#4d4dff] transition-all text-white font-grotesk font-bold sm:text-[24px] text-[18px] bg-[#4d4dff] px-4 py-3 rounded-md group">
