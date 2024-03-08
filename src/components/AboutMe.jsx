@@ -5,6 +5,7 @@ import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
 import { profile } from "../assets";
 import { about } from "../constants";
+import { CircularProgress, CircularProgressLabel } from "@chakra-ui/react";
 
 const AboutMe = () => {
   const [show, setshow] = useState(false);
@@ -12,78 +13,34 @@ const AboutMe = () => {
     // main container
     <>
       <motion.div id="about">
-        <motion.h2
+        {/* <motion.h2
           variants={textVariant()}
           className={`${styles.sectionHeadText} ${
             show ? "flex justify-center" : "justify-start"
           } font-bold mb-10`}
         >
           Get To Know Me
-        </motion.h2>
+        </motion.h2> */}
       </motion.div>
       {/* <div className="max-w-[80rem] flex justify-center items-center mx-auto"> */}
       <div
-        className={`relative sm:px-16 sm:py-16 px-3 py-10 w-full
-        mx-auto flex md:flex-col flex-wrap items-center justify-between bg-primary group rounded-2xl font-grotesk `}
+        className={`relative md:px-12 md:py-16 sm:px-8 sm:py-8 px-3 py-10 w-full
+        mx-auto flex  flex-wrap items-center justify-center bg-[#000919] group rounded-2xl font-grotesk `}
       >
-        <div className="absolute -inset-0.5 bg-gradient-to-r from-[#0575E6] to-[#4d4dff] rounded-2xl blur z-[-3] opacity-75 group-hover:opacity-100 transition duration-300 "></div>
+        {/* <div className="absolute -inset-0.5 bg-gradient-to-r from-[#0575E6] to-[#4d4dff] rounded-2xl blur z-[-3] opacity-75 group-hover:opacity-100 transition duration-300 "></div> */}
         <div className="w-full flex flex-row justify-center p-6">
           <img
             src={profile}
             className="relative w-[12rem] h-[12rem] sm:w-[15rem] sm:h-[15rem] rounded-full object-cover hover:scale-105 transition-all"
           />
-
-          {/* <p>
-            {about.map((item) => (
-              <ul
-                key={item.name}
-                className="flex flex-col items-start gap-10 list-none p-15 text-[24px] mb-10 font-grotesk "
-              >
-                <li className="mx-auto text-[24px] uppercase">
-                  <span className="">Hi, I'm </span>
-                  <span className="">{item.name}</span>
-                </li>
-                <li>
-                  Designation:{" "}
-                  <span className="text-[#ccd6f6] font-grotesk">
-                    {" "}
-                    {item.designation}
-                  </span>
-                </li>
-                <li>
-                  Qualification:{" "}
-                  <span className="text-[#ccd6f6] font-grotesk">
-                    {" "}
-                    {item.qualification}
-                  </span>
-                </li>
-                <li>
-                  Skillset:{" "}
-                  <span className="text-[#ccd6f6] font-grotesk">
-                    {" "}
-                    {item.Skillset}
-                  </span>
-                </li>
-              </ul>
-            ))}
-          </p> */}
-
-          {/* <button
-            className="sm:flex hidden p-4 border-2 border-[#4d4dff] rounded-sm hover:bg-[#4d4dff]"
-            onClick={() => {
-              setshow(!show);
-            }}
-          >
-            {show ? "Read More" : "Read Less"}
-          </button> */}
         </div>
-        <div className={` w-[60rem]`}>
-          <p className="font-grotesk p-10 sm:text-[20px] text-[14px]">
-            <span className="text-white sm:text-[70px] text-[45px] font-poppins flex justify-start sm:justify-center mb-4">
+        <div className={`w-[60rem]`}>
+          <p className="font-grotesk p-10 md:text-[20px] sm:text-[18px] text-[15px] text-white">
+            <span className="text-white sm:text-[75px] text-[50px] font-poppins flex justify-start sm:justify-center mb-4">
               {" "}
               I&apos;m Saral.
             </span>{" "}
-            <span className=" text-white font-bold  ">
+            <span className="text-white font-bold  ">
               I&apos;m a freshman at IIEST, Shibpur bacheloring in Electrical
               Engineering.
             </span>{" "}
@@ -105,7 +62,7 @@ const AboutMe = () => {
               : ``}
             <br />
             <button
-              className="sm:mt-3 mt-12 sm:flex sm:justify-center justify-start p-4 border-2 border-[#4d4dff] rounded-sm hover:bg-[#4d4dff]"
+              className="sm:mt-1 mt-12 sm:flex sm:justify-center justify-start p-4 border-2 border-[#4d4dff] rounded-sm hover:bg-[#4d4dff]"
               onClick={() => {
                 setshow(!show);
               }}
@@ -115,6 +72,7 @@ const AboutMe = () => {
           </p>
         </div>{" "}
       </div>
+
       {/* </div> */}
     </>
   );

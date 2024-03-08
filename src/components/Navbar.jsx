@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { menu, close, logox, logotr } from "../assets";
+import { menu, close, logotr } from "../assets";
+
 const Navbar = () => {
   const [showBackground, setshowBackground] = useState(false);
   const TOP_OFFSET = 50;
@@ -29,8 +30,8 @@ const Navbar = () => {
     <nav
       className={`${styles.paddingX} ${
         showBackground
-          ? "bg-[#000710] backdrop-blur-sm opacity-90 ease-in-out transition-all duration-[700ms] shadow-card"
-          : "bg-none ease-in-out transition-all duration-[400ms]"
+          ? "bg-[#000710] backdrop-blur-sm opacity-95 ease-in-out transition-all duration-[700ms]"
+          : "sm:bg-none bg-[#000710] ease-in-out transition-all duration-[400ms]"
       } w-full flex fixed py-1 top-0 z-20 font-grotesk`}
     >
       <div className="w-full flex justify-between">
@@ -82,7 +83,7 @@ const Navbar = () => {
                 ? "hidden"
                 : "flex animate-flip-down animate-duration-[400ms]"
             } p-8 flex ${
-              showBackground ? "bg-[#000710]" : ""
+              showBackground ? "bg-[#000710]" : "bg-[#000710]"
             } absolute top-[5.5rem] right-0 mx-0 top-z min-w-[160px] h-screen items-center w-full z-10 rounded-[0.5rem] `}
           >
             <ul className=" w-full list-none flex flex-col gap-[6rem] items-center flex-wrap">

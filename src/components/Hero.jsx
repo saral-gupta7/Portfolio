@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"; // importing react and useState.
+import { useState, useEffect } from "react"; // importing react and useState.
 
 import { motion } from "framer-motion"; // used for implementing all the animations in website.
 import { styles } from "../styles"; // custom made styles for certains components.
