@@ -8,9 +8,8 @@ const Footer = () => {
   return (
     <div
       className={`${styles.padding} bg-gradient-to-r from-[#000000] to-[#000026] w-full flex justify-center items-center gap-10  `}
-      id="socials"
     >
-      <div className="flex lg:flex-row flex-col justify-between w-full items-center space-y-12 mt-8">
+      <div className="flex  flex-col justify-between w-full items-center space-y-12 mt-8">
         {/* <h2 className={styles.sectionHeadText}>
           <span className="text-gray-400">Let&#39;s </span>Connect
         </h2> */}

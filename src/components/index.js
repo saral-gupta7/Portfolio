@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 import Tech from "./Tech";
 import AboutMe from "./AboutMe";
 import Footer from "./Footer";
-import Interest from "./Interest";
+
 import Contacts from "./Contacts";
 import Skills from "./Skills";
-export { Hero, Navbar, Tech, AboutMe, Interest, Footer, Contacts, Skills };
+export { Hero, Navbar, Tech, AboutMe, Footer, Contacts, Skills };

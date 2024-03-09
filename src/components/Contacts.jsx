@@ -13,15 +13,50 @@ const Contacts = () => {
   const formRef = useRef();
   const [Form, setForm] = useState({ name: "", email: "", message: "" });
   const [Loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState({ name: "", email: "", message: "" });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm({ ...Form, [name]: value });
+    setErrors({ ...errors, [name]: "" }); // Clear error message for the field being edited
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
+
+    let newErrors = {};
+    if (!Form.name) {
+      newErrors.name = "Name is required";
+    }
+    if (!Form.email) {
+      newErrors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(Form.email)) {
+      newErrors.email = "Email is invalid";
+    }
+    if (!Form.message) {
+      newErrors.message = "Message is required";
+    }
+
+    // If there are errors, do not submit the form
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      setLoading(false);
+      return;
+    }
+
+    // Submit form data
+    try {
+      // Your form submission logic goes here
+      console.log("Form submitted successfully!", Form);
+      // Optionally, reset the form after successful submission
+      setForm({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    } finally {
+      setLoading(false);
+    }
+
     emailjs
       .send(
         "service_7l9dc1i",
@@ -49,13 +84,16 @@ const Contacts = () => {
       );
   };
   return (
-    <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
+    <div
+      className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden justify-center"
+      id="socials"
+    >
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
         className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
       >
         <p className={styles.sectionSubText}>Get in Touch</p>
-        <h3 className={styles.sectionHeadTextk}>Contact.</h3>
+        <h3 className={styles.sectionHeadText}>Contact</h3>
         <form
           ref={formRef}
           onSubmit={handleSubmit}
@@ -72,6 +110,7 @@ const Contacts = () => {
               placeholder="What's your name?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
             />
+            {errors.name && <div className="text-red-500">{errors.name}</div>}
           </label>
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Email</span>
@@ -83,6 +122,7 @@ const Contacts = () => {
               placeholder="What's your email?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
             />
+            {errors.email && <div className="text-red-500">{errors.email}</div>}
           </label>
           <label className="flex flex-col">
             <span className="text-white font-mediumk mb-4">Your Message</span>
@@ -94,6 +134,9 @@ const Contacts = () => {
               placeholder="What do you want to say?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
             />
+            {errors.message && (
+              <div className="text-red-500">{errors.message}</div>
+            )}
           </label>
           <button
             type="submit"

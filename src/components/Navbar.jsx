@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { menu, close, logotr } from "../assets";
-import { Divider } from "@nextui-org/react";
-import MenuSharpIcon from "@mui/icons-material/MenuSharp";
 
 const Navbar = () => {
   const [showBackground, setshowBackground] = useState(false);

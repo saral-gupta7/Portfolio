@@ -10,20 +10,14 @@ const AboutMe = () => {
   return (
     // main container
     <>
-      <motion.div id="about">
-        {/* <motion.h2
-          variants={textVariant()}
-          className={`${styles.sectionHeadText} ${
-            show ? "flex justify-center" : "justify-start"
-          } font-bold mb-10`}
-        >
-          Get To Know Me
-        </motion.h2> */}
-      </motion.div>
-      {/* <div className="max-w-[80rem] flex justify-center items-center mx-auto"> */}
-      <div
+      <motion.div
         className={`relative md:px-12 md:py-16 sm:px-8 sm:py-8 px-3 py-10 w-full
-        mx-auto flex  flex-wrap items-center justify-center bg-[#000919] group rounded-2xl font-grotesk `}
+        mx-auto flex flex-wrap items-center justify-center bg-[#000919] group rounded-2xl font-grotesk`}
+        id="about"
+        variants={textVariant()}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
       >
         {/* <div className="absolute -inset-0.5 bg-gradient-to-r from-[#0575E6] to-[#4d4dff] rounded-2xl blur z-[-3] opacity-75 group-hover:opacity-100 transition duration-300 "></div> */}
         <div className="w-full flex flex-row justify-center p-6">
@@ -69,7 +63,7 @@ const AboutMe = () => {
             </button>
           </p>
         </div>{" "}
-      </div>
+      </motion.div>
 
       {/* </div> */}
     </>
