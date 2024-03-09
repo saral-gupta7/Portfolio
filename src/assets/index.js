@@ -53,5 +53,4 @@ export {
   tailwind,
   typescript,
   threejs,
-  carrent,
 };
