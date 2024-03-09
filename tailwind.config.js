@@ -1,9 +1,17 @@
 /** @type {import('tailwindcss').Config} */
+import { nextui } from "@nextui-org/react";
 import { fontFamily } from "tailwindcss/defaultTheme";
 import plugin from "tailwindcss/plugin";
 
 module.exports = {
-  content: ["./src/**/*.{js,jsx}"],
+  content: [
+    "./src/**/*.{js,jsx}",
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
+  ],
+  // content: [
+  //   // ...
+  //   "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
+  // ],
   mode: "jit",
   theme: {
     extend: {
@@ -35,5 +43,6 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animated")],
+  darkMode: "class",
+  plugins: [require("tailwindcss-animated"), nextui()],
 };

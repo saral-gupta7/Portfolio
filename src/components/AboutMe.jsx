@@ -4,8 +4,6 @@ import { styles } from "../styles";
 import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
 import { profile } from "../assets";
-import { about } from "../constants";
-import { CircularProgress, CircularProgressLabel } from "@chakra-ui/react";
 
 const AboutMe = () => {
   const [show, setshow] = useState(false);
@@ -62,7 +60,7 @@ const AboutMe = () => {
               : ``}
             <br />
             <button
-              className="sm:mt-1 mt-12 sm:flex sm:justify-center justify-start p-4 border-2 border-[#4d4dff] rounded-sm hover:bg-[#4d4dff]"
+              className="sm:mt-1 mt-12 sm:flex sm:justify-center justify-start p-4 border-2 border-[#4d4dff] rounded-sm hover:bg-[#4d4dff] transition"
               onClick={() => {
                 setshow(!show);
               }}

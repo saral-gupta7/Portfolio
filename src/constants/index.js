@@ -8,6 +8,7 @@ import {
   linkedin,
   next,
 } from "../assets";
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 export const navLinks = [
   {
@@ -19,21 +20,12 @@ export const navLinks = [
     title: "Learnings",
   },
   {
-    id: "interest",
-    title: "Interests",
+    id: "skills",
+    title: "Skills",
   },
   {
     id: "socials",
     title: "Let's Connect",
-  },
-];
-
-const about = [
-  {
-    name: "Saral",
-    designation: "Student",
-    qualification: "Sophomore",
-    Skillset: "Javascript, ReactJS, NodeJS",
   },
 ];
 
@@ -89,4 +81,4 @@ const interest = [
   },
 ];
 
-export { services, socials, interest, about };
+export { services, socials, interest };

@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { menu, close, logotr } from "../assets";
+import { Divider } from "@nextui-org/react";
+import MenuSharpIcon from "@mui/icons-material/MenuSharp";
 
 const Navbar = () => {
   const [showBackground, setshowBackground] = useState(false);
@@ -30,7 +32,7 @@ const Navbar = () => {
     <nav
       className={`${styles.paddingX} ${
         showBackground
-          ? "bg-[#000710] backdrop-blur-sm opacity-95 ease-in-out transition-all duration-[700ms]"
+          ? "bg-[#000710] backdrop-blur-lg  opacity-90 ease-in-out transition-all duration-[700ms]"
           : "sm:bg-none bg-[#000710] ease-in-out transition-all duration-[400ms]"
       } w-full flex fixed py-1 top-0 z-20 font-grotesk`}
     >
@@ -66,7 +68,6 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-
         <div className="lg:hidden flex flex-1 justify-end items-center">
           <img
             src={toggle ? close : menu}
@@ -84,7 +85,7 @@ const Navbar = () => {
                 : "flex animate-flip-down animate-duration-[400ms]"
             } p-8 flex ${
               showBackground ? "bg-[#000710]" : "bg-[#000710]"
-            } absolute top-[5.5rem] right-0 mx-0 top-z min-w-[160px] h-screen items-center w-full z-10 rounded-[0.5rem] `}
+            } absolute top-[5.5rem] right-0 mx-0 min-w-[160px] h-screen items-center w-full z-10 rounded-[0.5rem] `}
           >
             <ul className=" w-full list-none flex flex-col gap-[6rem] items-center flex-wrap">
               {navLinks.map((link) => (

@@ -20,8 +20,10 @@ const Hero = () => {
       style={{ transform: `translateY(${offSetY * 0.3}px)` }}
     >
       <div
-        className={`${styles.paddingX} absolute inset-0 max-w-7xl mx-auto flex items-center justify-center gap-5  drop-shadow-lg`}
+        className={`${styles.paddingX} absolute inset-0 w-full mx-auto flex items-center justify-center gap-5  drop-shadow-lg`}
       >
+        <div className="absolute -inset-0.5 bg-gradient-to-r from-[#3f35d1]  to-[#000000] rounded-2xl blur z-[-1] opacity-75 group-hover:opacity-100 transition duration-300 "></div>
+
         {/* The Main text */}
 
         <motion.div
