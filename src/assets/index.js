@@ -22,8 +22,6 @@ import profile from "./profile.jpeg";
 import git from "./git.png";
 import instagram from "./instagram.png";
 import linkedin from "./linkedin.png";
-
-import carrent from "./carrent.png";
 import next from "./next.png";
 import ua from "./ua.png";
 import ar from "./ar.png";

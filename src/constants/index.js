@@ -8,7 +8,6 @@ import {
   linkedin,
   next,
 } from "../assets";
-import InstagramIcon from "@mui/icons-material/Instagram";
 
 export const navLinks = [
   {
